@@ -120,7 +120,32 @@ body {
     color: var(--primary-color);
 }
 
-.about-content p {
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-image {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    transition: var(--transition);
+}
+
+.profile-img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.about-text p {
     font-size: 1.1rem;
     margin-bottom: 2rem;
     line-height: 1.8;
@@ -317,6 +342,14 @@ body {
     .portfolio h2,
     .contact h2 {
         font-size: 2rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-img {
+        max-width: 250px;
     }
 
     .services-grid,
